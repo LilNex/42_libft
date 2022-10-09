@@ -22,3 +22,12 @@ void ft_bzero(void *s,size_t n);
 char *ft_strstr(const char *haystack, const char *needle);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void *ft_memmove(void *dst, const void *src, size_t len);
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
+int	ft_atoi(const char *str);
+char *ft_strdup(const char *s1);
+void *ft_calloc(size_t count, size_t size);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+
+char    *ft_isspace(char c);
