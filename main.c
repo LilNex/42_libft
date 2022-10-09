@@ -5,8 +5,8 @@
 #include "libft.h"
 int main ()
 {
-    char test[20] = "f";
-    char test2[20] ="f   Foo Bar ";
+    char test[20] = "f a";
+    char test2[100] ="f a  Foo Bara f a f";
     char c = ' ';
     char *n;
     printf("st : %s\n", ft_strtrim(test2,test));
