@@ -10,6 +10,9 @@ char *ft_strtrim(char const *s1, char const *set)
     str = ft_calloc(ft_strlen((char *)s1) + 1,sizeof(char));
     i = 0;
 
+    if (s1 == '\0' || *s1 == '\0')
+        return (char *)str;
+
     c = malloc(sizeof(char) * 2);
     c[0] = *s1;
     c[1] = '\0';  
@@ -23,7 +26,6 @@ char *ft_strtrim(char const *s1, char const *set)
         c[0] = str[--i];
 
     str[i+1] = '\0';
-    
     return str ;
 
 }

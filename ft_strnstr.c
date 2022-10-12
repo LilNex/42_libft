@@ -10,7 +10,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
     str = (char *)haystack;
     to_find = (char *)needle;
 	n = ft_strlen(to_find);
-	if (*to_find == '\0')
+	if (*to_find == '\0' || to_find == 0|| len == 0)
 		return (str);
 	while (*str != '\0' && len > 0)
 	{

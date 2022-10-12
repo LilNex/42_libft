@@ -2,7 +2,7 @@
 
 char *ft_strchr(const char *s, int c)
 {
-    int i;
+    unsigned int i;
     char *adress;
     i = 0;
 
@@ -14,5 +14,7 @@ char *ft_strchr(const char *s, int c)
         }
         i++;
     }
+    if (s[i]==c)
+        return ((char *)&s[i]);
     return ((char *)'\0');
 }
