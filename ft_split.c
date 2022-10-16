@@ -33,12 +33,7 @@ char **fillArray(char *s,char c,char **arr){
     while (s[i])
     {
         printf("%c",s[i]);
-        // if(s[i] == c)
-        // {
-            
-        // }
-        // while (s[i] == c)
-        //         i++;
+
         y = 0;
             while (s[++i] != c)
                 *(*(arr + count)+ (y++)) = s[i] ;

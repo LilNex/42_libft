@@ -6,11 +6,10 @@
 int main ()
 {
     char test[20] = "f a";
-    char test2[100] ="cz   Foo Bar B  Ss     az     ";
+    char test2[100] ="cz   Foo Bar B  Ss     az   \0  ";
     char c = ' ';
     char *n;
-    // printf("st : %s\n", strtok(test2," "));
-    // printf("test 2 : %s\n", test2);
+
     printf("st : %s\n", ft_split(test2,' '));
     // printf("strstr : %s\n", ft_strnstr(test2,test,1));
     // printf("ft : %d\n",ft_atoi(test));
