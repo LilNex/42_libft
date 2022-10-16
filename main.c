@@ -10,7 +10,11 @@ int main ()
     char c = ' ';
     char *n;
 
-    printf("%s\n",ft_memmove(test2+1,test2,10));
+    // printf("%s\n",ft_memmove(test2+1,test2,10));
+
+
+
+    printf("%s\n",ft_substr(test2,2,3));
     // printf("%s",memmove(test2+1,test2,10));
     // printf("st : %s\n", strtok(test2," "));
     // printf("test 2 : %s\n", test2);

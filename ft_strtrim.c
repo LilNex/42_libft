@@ -11,7 +11,7 @@ char *ft_strtrim(char const *s1, char const *set)
     i = 0;
 
     if (s1 == '\0' || *s1 == '\0')
-        return (char *)str;
+        return (char *)s1;
 
     c = malloc(sizeof(char) * 2);
     c[0] = *s1;
