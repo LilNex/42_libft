@@ -22,6 +22,7 @@ void ft_bzero(void *s,size_t n);
 char *ft_strstr(const char *haystack, const char *needle);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void *ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_revmemcpy(void *dst, const void *src, size_t n);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 int	ft_atoi(const char *str);
 char *ft_strdup(const char *s1);
