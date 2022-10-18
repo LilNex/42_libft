@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daelee <daelee@student.42seoul.kr>         +#+  +:+       +#+         #
+#    By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2021/01/03 12:23:27 by daelee           ###   ########.fr        #
+#    Updated: 2022/10/18 22:49:50 by ichaiq           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,9 @@ FILES = ft_memset \
 		ft_strjoin \
 		ft_strtrim \
 		ft_strcmp \
+		ft_itoa \
+		ft_split \
+		ft_rev_tab \
 # FILES_B = 	ft_lstnew \
 # 	  		ft_lstadd_front \
 # 	  		ft_lstsize \

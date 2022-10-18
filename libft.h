@@ -1,4 +1,5 @@
 #include<stddef.h>
+#include<stdio.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -24,12 +25,16 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_revmemcpy(void *dst, const void *src, size_t n);
 char	*ft_strcat(char *  s1, const char *  s2);
-int	ft_atoi(const char *str);
-char *ft_strdup(const char *s1);
-void *ft_calloc(size_t count, size_t size);
-char *ft_substr(char const *s, unsigned int start, size_t len);
-char *ft_strjoin(char const *s1, char const *s2);
-char *ft_strtrim(char const *s1, char const *set);
-char *ft_split(char const *s, char c);
-
+int     ft_atoi(const char *str);
+char    *ft_strdup(const char *s1);
+void    *ft_calloc(size_t count, size_t size);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
+char    *ft_split(char const *s, char c);
+char    *ft_itoa(int n);
+void	ft_rev_char_tab(char *tab, int size);
+// char     ft_itoa(int n);
 char    *ft_isspace(char c);
+void	ft_rev_int_tab(int *tab, int size);
+void    ft_putchar_fd(char c, int fd);
