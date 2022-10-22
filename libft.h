@@ -1,5 +1,10 @@
 #include<stddef.h>
 #include<stdio.h>
+typedef struct s_list
+{
+    void *content;
+    struct t_list *next;
+}   t_list;
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -8,7 +13,7 @@ int ft_tolower(int c);
 int  ft_isalnum(int c);
 int ft_isascii(int c);
 int  ft_isprint(int c);
-size_t ft_strlen(char *c);
+size_t ft_strlen(const char *c);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 int	ft_strcmp(const char *s1, const char *s2);
@@ -34,7 +39,16 @@ char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_split(char const *s, char c);
 char    *ft_itoa(int n);
 void	ft_rev_char_tab(char *tab, int size);
+char	*ft_strlcpy(char *dest,const char *src,size_t dstsize);
+
 // char     ft_itoa(int n);
 char    *ft_isspace(char c);
+char	*ft_strcpy(char *dest, char *src);
 void	ft_rev_int_tab(int *tab, int size);
 void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
+t_list  *ft_lstnew(void *content);
+void    ft_lstadd_front(t_list **lst, t_list *new);
+

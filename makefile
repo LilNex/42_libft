@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/09 18:24:09 by daelee            #+#    #+#              #
-#    Updated: 2022/10/18 22:49:50 by ichaiq           ###   ########.fr        #
+#    Updated: 2022/10/22 10:21:19 by ichaiq           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,15 +45,16 @@ FILES = ft_memset \
 		ft_itoa \
 		ft_split \
 		ft_rev_tab \
-# FILES_B = 	ft_lstnew \
-# 	  		ft_lstadd_front \
-# 	  		ft_lstsize \
-# 	  		ft_lstlast \
-# 	  		ft_lstadd_back \
-# 	  		ft_lstdelone \
-# 	  		ft_lstclear \
-# 	  		ft_lstiter \
-# 	  		ft_lstmap
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		ft_lstnew \
+		ft_lstadd_front \
+		ft_strcpy \
+		ft_strlcpy \
+		# ft_strlcat \
+
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
