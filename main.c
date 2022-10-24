@@ -25,12 +25,12 @@ int main ()
     // printf("content : %d\n",(int)(arr+2)->content);
     // printf("content : %d\n",(int)(arr+3)->content);
     // arr = ft_lstnew((char *)56256154);
-    char *s1;
-    char *s2= "Wolrd";
-    char dest[20];
+    // char *s1;
+    char *s2= "  Wolrd";
+    char dest[6];
     printf("before strcpy\n");
-    s1 = ft_strlcpy(dest,s2,20);
-    printf("result : %s\n",s1);
+    ft_strlcpy(dest,s2,5);
+    printf("result : %s\n",dest);
     printf("%d\n",(int)dest[5]);
 
 }

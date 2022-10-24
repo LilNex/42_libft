@@ -39,8 +39,8 @@ char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_split(char const *s, char c);
 char    *ft_itoa(int n);
 void	ft_rev_char_tab(char *tab, int size);
-char	*ft_strlcpy(char *dest,const char *src,size_t dstsize);
-
+// char	*ft_strlcpy(char *dest,const char *src,size_t dstsize);
+size_t	ft_strlcpy(char *dest,const char *src,size_t dstsize);
 // char     ft_itoa(int n);
 char    *ft_isspace(char c);
 char	*ft_strcpy(char *dest, char *src);
