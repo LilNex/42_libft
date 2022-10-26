@@ -1,8 +1,7 @@
 #include "libft.h"
 #include<stdlib.h>
 #include<stdio.h>
-
-static int get_count_words(char *s, char c)
+int get_count_words(char *s, char c)
 {
     int count;
     int i;
@@ -25,30 +24,27 @@ static int get_count_words(char *s, char c)
     return (count);
 }
 
-static char **fillArray(const char *s, char c, char **arr,int countW)
+char **fillArray(const char *s, char c, char **arr,int countW)
 {
-    char    *l;
-    int     len;
-    int     x;
-    char    *str;
+    char *l;
+    int len;
+    int x;
+    printf("init : %s\n",s);
     x = 0;
-    while (x < countW){
-        while(!ft_strncmp(s,&c,1))
+    // ;
+    while ( x < countW){
+        while(ft_strncmp(s,&c,1) == 0)
             s++;
         l = ft_strchr(s,c);
-        // if (!l) return NULL;
+
         // if(x == countW - 1)
         //     len = ft_strlen(s);
         // else
             len = (void *)l - (void *)s;
-        str = ft_substr(s,0,len);
-        if (!str)
-        {
-            while (x > 0)
-                free(arr - (x--));
-        }
+        char *str = ft_substr(s,0,len);
         *arr = str;
-        arr++;
+        printf("word : %s\n",*arr);
+        arr = arr +1;
         s += len+1;
         x++;
         
@@ -64,18 +60,13 @@ char **ft_split(char const *s, char c)
     int i;
     char *_s;
     char **arr;
-    if (!s)
-        return NULL;
-
     _s = ft_strtrim(s," ");
     i = 0;
-    count_words = get_count_words(_s,c) +1;
-    arr = malloc(sizeof(char *) * count_words);
-    if (!arr)
-        return NULL;
+    count_words = get_count_words(_s,c);
+    arr = malloc(8 * count_words +1);
 
-    arr = fillArray(_s,c,arr,count_words);
-    if (!arr)
-        return NULL;
+   arr = fillArray(_s,c,arr,count_words);
+    // printf("count : %s\n", *arr);
+    printf("\n");
     return arr;
 } 

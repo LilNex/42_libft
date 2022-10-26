@@ -13,6 +13,6 @@ int main ()
 
     s1 = ft_split(s,'|');
 
-    printf("s1 : %s",*s1);
+    // printf("s1 : %s",*s1);
 
 }

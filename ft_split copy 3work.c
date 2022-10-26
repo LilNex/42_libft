@@ -1,8 +1,7 @@
 #include "libft.h"
 #include<stdlib.h>
 #include<stdio.h>
-
-static int get_count_words(char *s, char c)
+int get_count_words(char *s, char c)
 {
     int count;
     int i;
@@ -25,7 +24,7 @@ static int get_count_words(char *s, char c)
     return (count);
 }
 
-static char **fillArray(const char *s, char c, char **arr,int countW)
+char **fillArray(const char *s, char c, char **arr,int countW)
 {
     char    *l;
     int     len;
@@ -69,8 +68,8 @@ char **ft_split(char const *s, char c)
 
     _s = ft_strtrim(s," ");
     i = 0;
-    count_words = get_count_words(_s,c) +1;
-    arr = malloc(sizeof(char *) * count_words);
+    count_words = get_count_words(_s,c);
+    arr = malloc(8 * count_words);
     if (!arr)
         return NULL;
 
