@@ -5,32 +5,14 @@
 #include "libft.h"
 int main ()
 {
+    char *s1;
+    char *s2;
+    char *s3;
+    char s[30] = "    s Hel lo World";
+    char **arr;
 
-    printf("starst\n");
+    s1 = ft_split(s,' ');
 
-    // struct s_list *arr;
-    // struct s_list **darr;
-    // darr = malloc(sizeof(t_list)*4);
-    // int i = 0;
-    // while (i < 4)
-    // {
-    //     struct s_list *tmp = ft_calloc(1,sizeof(t_list));
-    //     tmp->content = ft_itoa(i+10);
-    //     *darr = tmp;
-    //     darr++;
-    //     i++;
-    // }
-    // printf("content : %d\n",(int)arr->content);
-    // printf("content : %d\n",(int)(arr+1)->content);
-    // printf("content : %d\n",(int)(arr+2)->content);
-    // printf("content : %d\n",(int)(arr+3)->content);
-    // arr = ft_lstnew((char *)56256154);
-    // char *s1;
-    char *s2= "  Wolrd";
-    char dest[6];
-    printf("before strcpy\n");
-    ft_strlcpy(dest,s2,5);
-    printf("result : %s\n",dest);
-    printf("%d\n",(int)dest[5]);
+    printf("s1 : %s",s1);
 
 }
