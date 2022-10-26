@@ -1,17 +1,12 @@
-#include"libft.h"
+
+#include "libft.h"
 
 void    ft_lstadd_front(t_list **lst, t_list *new)
 {
-    (void)new;
-    while (lst++ != NULL)
-    {
-        if (lst == NULL)
-        {
-            lst--;
-            // (*lst)->next = new;
-            return;
-        }
-        
-    }
-    
+	if (lst)
+	{
+		if (*lst)
+			new->next = (struct t_list *)*lst;
+		*lst = new;
+	}
 }

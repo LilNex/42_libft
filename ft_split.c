@@ -25,7 +25,7 @@ int get_count_words(char *s, char c)
 }
 
 void fillArray(char *s,char c,void *a){
-    printf("test");
+    // printf("test");
     int i = 0;
     int y = 0;
     int count = 0;
@@ -35,7 +35,7 @@ void fillArray(char *s,char c,void *a){
     char **arr = (char **)a;
     while (s[i])
     {
-        printf("%c",s[i]);
+        // printf("%c",s[i]);
         // if(s[i] == c)
         // {
             
@@ -64,9 +64,9 @@ char *ft_split(char const *s, char c)
     i = 0;
     count_words = get_count_words(_s,c);
     arr = malloc(8 * count_words);
-    printf("count : %d\n", count_words);
-    printf("s : %s\n", s);
-    fillArray(_s,c,arr);
+    // printf("count : %d\n", count_words);
+    // printf("s : %s\n", s);
+    // fillArray(_s,c,arr);
     // printf("count : %s\n", *arr);
     
     return (char *)_s;
