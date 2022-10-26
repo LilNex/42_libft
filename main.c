@@ -8,11 +8,11 @@ int main ()
     char *s1;
     char *s2;
     char *s3;
-    char s[30] = "    s Hel lo World";
+    char s[30] = "split  ||this|for|me|||||!|";
     char **arr;
 
-    s1 = ft_split(s,' ');
+    s1 = ft_split(s,'|');
 
-    printf("s1 : %s",s1);
+    printf("s1 : %s",*s1);
 
 }

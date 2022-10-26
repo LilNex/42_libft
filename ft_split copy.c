@@ -30,12 +30,10 @@ char **fillArray(const char *s, char c, char **arr,int countW)
     int len;
     int x;
     x = 0;
-    // ;
-    while ( x < countW){
+    while (x < countW){
         while(ft_strncmp(s,&c,1) == 0)
             s++;
         l = ft_strchr(s,c);
-
         // if(x == countW - 1)
         //     len = ft_strlen(s);
         // else
@@ -62,9 +60,9 @@ char **ft_split(char const *s, char c)
     i = 0;
     count_words = get_count_words(_s,c);
     arr = malloc(8 * count_words);
+    // if(!arr)
+    //     return NULL;
 
    arr = fillArray(_s,c,arr,count_words);
-    // printf("count : %s\n", *arr);
-    printf("\n");
     return arr;
 } 
