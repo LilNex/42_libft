@@ -18,10 +18,10 @@ void *ft_memchr(const void *s, int c,size_t n)
     // printf("\n");
     // printf("n : %zu\n",n);
     // printf("i : %d\n",i);
-    while (*(adress) != '\0' && i <=n)
+    while (i < n && *adress != '\0')
     {
         // printf("i : %d\n",i);
-        if (*adress == c){
+        if (*adress == (c % 256)){
             return (adress);
         }
          adress++;

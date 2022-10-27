@@ -40,15 +40,19 @@ static char **fillArray(const char *s, char c, char **arr,int countW)
         // if(x == countW - 1)
         //     len = ft_strlen(s);
         // else
+        if(l != NULL)
             len = (void *)l - (void *)s;
+        else
+            len = ft_strlen(s);
         str = ft_substr(s,0,len);
         if (!str)
         {
             while (x > 0)
-                free(arr - (x--));
+                ft_free(arr - (x--),len);
         }
         *arr = str;
         arr++;
+        // printf("%s\n",str);
         s += len+1;
         x++;
         
@@ -76,6 +80,6 @@ char **ft_split(char const *s, char c)
 
     arr = fillArray(_s,c,arr,count_words);
     if (!arr)
-        return NULL;
+        return (NULL);
     return arr;
 } 

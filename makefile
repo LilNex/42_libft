@@ -36,6 +36,8 @@ FILES = ft_memset \
 		ft_isprint \
 		ft_toupper \
 		ft_tolower \
+		ft_free \
+		ft_exitfree \
 		ft_calloc \
 		ft_strdup \
 		ft_substr \

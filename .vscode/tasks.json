@@ -35,6 +35,10 @@
                 "-g",
                 "libft.h",
                 "ft_split.c",
+                "ft_memchr.c",
+                "ft_substr.c",
+                "ft_strlcpy.c",
+                "ft_strtrim.c",
                 "libft.a",
            
                 // "-o",

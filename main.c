@@ -5,14 +5,14 @@
 #include "libft.h"
 int main ()
 {
-    char *s1;
-    char *s2;
-    char *s3;
-    char s[30] = "split  ||this|for|me|||||!|";
-    char **arr;
-
-    s1 = ft_split(s,'|');
-
-    // printf("s1 : %s",*s1);
-
+    // void *s3;
+    char *arr;
+    // char src[] = "   sqd Qsds  sssdqs qsd q   qa ";
+	// char dest[10];
+    // char s[] = {0, 1, 2 ,3 ,4 ,5};
+    // s3 = ft_memchr(s, 2 + 256, 3);
+    arr = ft_strtrim("123", "");
+    // printf("p : %p",s3);
+    printf("s : %s",arr);
+    // s = ft_substr("BONJOUR LES HARICOTS !", 8, 14);
 }
