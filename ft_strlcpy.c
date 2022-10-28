@@ -7,7 +7,7 @@ ft_strlcpy(char * dst, const char * src, size_t dsize)
 	const char	*firstSrc;
 	size_t 		i;
 	if(dsize < 0 || dsize+1 == 0)
-		return 0;
+		dsize = ft_strlen(src) + 1;
 	i = dsize;
 	
 	firstSrc = src;

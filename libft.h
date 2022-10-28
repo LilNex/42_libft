@@ -1,11 +1,11 @@
 #include<stddef.h>
 #include<stdio.h>
 #include<stdlib.h>
-typedef struct s_list
+typedef struct		s_list
 {
-	void *content;
-	struct s_list *next;
-}   t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -43,6 +43,7 @@ void	ft_rev_char_tab(char *tab, int size);
 size_t	ft_strlcpy(char *dst,const char *src,size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 // char     ft_itoa(int n);
 char	*ft_strcpy(char *dest, char *src);
 void	ft_rev_int_tab(int *tab, int size);
@@ -57,5 +58,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
 void	ft_free(void *p, size_t size);
 void 	*ft_exitfree(void *p, size_t size);

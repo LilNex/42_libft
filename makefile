@@ -57,11 +57,14 @@ FILES = ft_memset \
 		ft_strlcpy \
 		ft_strlcat \
 		ft_strmapi \
+		ft_striteri \
 		ft_lstsize \
 		ft_lstlast \
 		ft_lstadd_back \
 		ft_lstdelone \
 		ft_lstclear \
+		ft_lstiter \
+		ft_lstmap \
 
 
 SRCS_DIR = ./
