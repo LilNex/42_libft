@@ -1,13 +1,20 @@
-#include "libft.h"
-#include <stdlib.h>
-void *ft_calloc(size_t count, size_t size)
+#include"libft.h"
+#include <stdint.h>
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	void    *ptr;
+	void	*ptr;
+
+	if (count == SIZE_MAX || size == SIZE_MAX)
+		return (NULL);
 	if (count == 0 || size == 0)
-		size = count = 1;
+	{
+		count = 1;
+		size = count;
+	}
 	ptr = malloc(count * size);
 	if (!ptr)
-		 return(NULL);
+		return (NULL);
 	ft_bzero(ptr,count * size);
-	return (void *)ptr;
+	return ((void *)ptr);
 }

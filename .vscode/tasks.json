@@ -40,6 +40,7 @@
                 "ft_strlcpy.c",
                 "ft_free.c",
                 "ft_strtrim.c",
+                "ft_strnstr.c",
                 "libft.a",
            
                 // "-o",
