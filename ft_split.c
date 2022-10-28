@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	str = ft_strtrim(s, " ");
+	if(!str)
+		return NULL;
 	i = 0;
 	count_words = get_count_words(str, c);
 	arr = malloc(sizeof(char *) * (count_words + 1));
