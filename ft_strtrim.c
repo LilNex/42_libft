@@ -43,9 +43,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	start = get_start(s1,set);
 	end = get_end(s1,set);
 	len = end - start +1 ;
-	if (start >= end)
+	if (start > end)
 		return ft_strdup("");
-	str = ft_calloc(len + 1, sizeof(len));
+	str = ft_calloc(len + 1, sizeof(char));
 	if(!str)
 		return NULL;
 	ft_strlcpy(str,s1 + start,len+1);

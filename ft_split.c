@@ -36,19 +36,15 @@ static char **fillArray(const char *s, char c, char **arr,int countW)
         while(!ft_strncmp(s,&c,1))
             s++;
         l = ft_strchr(s,c);
-        // if (!l) return NULL;
-        // if(x == countW - 1)
-        //     len = ft_strlen(s);
-        // else
         if(l != NULL)
             len = (void *)l - (void *)s;
         else
             len = ft_strlen(s);
         str = ft_substr(s,0,len);
-        if (!str)
-        {
-            while (x > 0)
-                ft_free(arr - (x--),len);
+        if (!str){
+            while (x-- > 0)
+                ft_free(arr - (x-1),ft_strlen((char*)(arr - (x-1))));
+            return NULL;        
         }
         *arr = str;
         arr++;
@@ -58,8 +54,7 @@ static char **fillArray(const char *s, char c, char **arr,int countW)
         
     }
     *arr = NULL;
-    return arr - x;
-
+    return arr - x ;
 }
 
 char **ft_split(char const *s, char c)
@@ -73,12 +68,13 @@ char **ft_split(char const *s, char c)
 
     _s = ft_strtrim(s," ");
     i = 0;
-    count_words = get_count_words(_s,c) +1;
-    arr = malloc(sizeof(char *) * count_words);
+    count_words = get_count_words(_s,c) ;
+    arr = malloc(sizeof(char *) * (count_words+1));
     if (!arr)
         return NULL;
-
+    
     arr = fillArray(_s,c,arr,count_words);
+    ft_free(_s,ft_strlen(_s));
     if (!arr)
         return (NULL);
     return arr;

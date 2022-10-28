@@ -38,6 +38,7 @@
                 "ft_memchr.c",
                 "ft_substr.c",
                 "ft_strlcpy.c",
+                "ft_free.c",
                 "ft_strtrim.c",
                 "libft.a",
            
