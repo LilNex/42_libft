@@ -26,6 +26,7 @@ FILES = ft_memset \
 		ft_strlen \
 		ft_strchr \
 		ft_strrchr \
+		ft_strstr \
 		ft_strnstr \
 		ft_strncmp \
 		ft_atoi \
@@ -34,6 +35,7 @@ FILES = ft_memset \
 		ft_isalnum \
 		ft_isascii \
 		ft_isprint \
+		ft_isspace \
 		ft_toupper \
 		ft_tolower \
 		ft_free \
@@ -55,6 +57,8 @@ FILES = ft_memset \
 		ft_lstadd_front \
 		ft_strcpy \
 		ft_strlcpy \
+		ft_strcat \
+		ft_strncat \
 		ft_strlcat \
 		ft_strmapi \
 		ft_striteri \

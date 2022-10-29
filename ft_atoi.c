@@ -100,7 +100,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	signe = 1;
 	_str = l_trim((char *)str);
-	while (_str[i] != '\0' && get_signe(_str[i]) != 0)
+	if (_str[i] != '\0' && get_signe(_str[i]) != 0)
 	{
 		signe *= get_signe(_str[i]);
 		i++;
