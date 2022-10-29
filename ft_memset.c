@@ -1,38 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
-#include<stddef.h>
 
-void *ft_memset(void *b, int c,size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned int i;
-    char *adress;
-    i = 0;
-    adress = (char *)b;
+	unsigned int	i;
+	char			*adress;
 
-    while (i < len)
-    {
-        *(adress + i) = c;
-        // adress++;
-        i++;
-    }
-    return (adress);
+	i = 0;
+	adress = (char *)b;
+	while (i < len)
+	{
+		*(adress + i) = c;
+		i++;
+	}
+	return (adress);
 }
-// void * ft_memset (void *dest, int val, size_t len)
-// {
-//   unsigned char *ptr = dest;
-//   while (len-- > 0)
-//     *ptr++ = val;
-//   return dest;
-// }
-
-// void	*ft_memset(void *b, int c, size_t len)
-// {
-// 	size_t i;
-
-// 	i = 0;
-// 	while (i < len)
-// 	{
-// 		((unsigned char *)b)[i] = c;
-// 		i++;
-// 	}
-// 	return (b);
-// }

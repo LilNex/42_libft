@@ -59,7 +59,7 @@ static char	**fill_array(const char *s, char c, char **arr, int countw)
 		s += len + 1;
 		x++;
 	}
-	*arr = NULL;
+	*arr = 0;
 	return (arr - x);
 }
 

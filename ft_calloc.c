@@ -1,5 +1,15 @@
-#include"libft.h"
-#include <stdint.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -15,6 +25,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr,count * size);
+	ft_bzero(ptr, count * size);
 	return ((void *)ptr);
 }

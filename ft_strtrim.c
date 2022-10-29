@@ -1,6 +1,17 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
 
-int	get_start(const char *s1, const char *set)
+static int	get_start(const char *s1, const char *set)
 {
 	int	i;
 	int	len;
@@ -16,7 +27,7 @@ int	get_start(const char *s1, const char *set)
 	return (i);
 }
 
-int	get_end(const char *s1, const char *set)
+static int	get_end(const char *s1, const char *set)
 {
 	int	i;
 	int	len;
@@ -32,7 +43,6 @@ int	get_end(const char *s1, const char *set)
 	return (i);
 }
 
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
@@ -42,8 +52,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	start = get_start(s1,set);
-	end = get_end(s1,set);
+	start = get_start(s1, set);
+	end = get_end(s1, set);
 	len = end - start +1 ;
 	if (start > end)
 		return (ft_strdup(""));

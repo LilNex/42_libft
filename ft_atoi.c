@@ -1,63 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-// char	*l_trim(char *str)
-// {
-// 	while (ft_isspace(*str) && *str != '\0')
-// 	{
-// 		str++;
-// 	}
-// 	return (str);
-// }
-
-// int	get_signe(char c)
-// {
-// 	if (c == '-')
-// 		return (-1);
-// 	else if (c == '+')
-// 		return (1);
-// 	else
-// 		return (1);
-// }
-
-// int	get_nbr(char*str)
-// {
-// 	int	i;
-// 	int	nbr;
-
-// 	i = 0;
-// 	nbr = 0;
-// 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-// 	{
-// 		nbr = nbr * 10 + ((int)str[i] - 48);
-// 		i++;
-// 	}
-// 	return (nbr);
-// }
-
-// int	ft_atoi(const char *str)
-// {
-// 	int		i;
-// 	int		signe;
-// 	char	*_str;
-
-// 	i = 0;
-// 	signe = 1;
-// 	_str = l_trim((char *)str);
-	
-//     signe *= get_signe(*_str++);
-
-// 	return (signe * get_nbr(_str + i));
-// }
-
-
-int	is_space(char c)
+static int	is_space(char c)
 {
 	return (c == '\t' || c == '\n' || c == ' '
 		|| c == '\v' || c == '\f' || c == '\r');
 }
 
-char	*l_trim(char *str)
+static char	*l_trim(char *str)
 {
 	while (is_space(*str) && *str != '\0')
 	{
@@ -66,7 +27,7 @@ char	*l_trim(char *str)
 	return (str);
 }
 
-int	get_signe(char c)
+static int	get_signe(char c)
 {
 	if (c == '-')
 		return (-1);
@@ -76,7 +37,7 @@ int	get_signe(char c)
 		return (0);
 }
 
-long	get_nbr(char*str)
+static long	get_nbr(char*str)
 {
 	int		i;
 	long	nbr;
@@ -85,8 +46,6 @@ long	get_nbr(char*str)
 	nbr = 0;
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
-		// if (nbr  >= 9223372036854775807)
-		// 	return -1;
 		nbr = nbr * 10 + ((int)str[i] - 48);
 		i++;
 	}

@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-void	fill_nbr(char *str, int *n, int *signe, int *l)
+static void	fill_nbr(char *str, int *n, int *signe, int *l)
 {
 	int	nbr;
 	int	len;
@@ -9,7 +20,7 @@ void	fill_nbr(char *str, int *n, int *signe, int *l)
 	len = *l;
 	if (nbr < 0)
 	{
-		if(nbr == -2147483648)
+		if (nbr == -2147483648)
 		{
 			str[len] = '8';
 			nbr = nbr / 10;
@@ -35,9 +46,10 @@ char	*ft_itoa(int n)
 	char	*str;
 	char	*a;
 	int		signe;
+
 	str = ft_calloc(20, sizeof(char));
 	if (!str)
-		return NULL;
+		return (NULL);
 	nbr = n;
 	len = 0;
 	signe = 1;

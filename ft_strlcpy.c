@@ -1,79 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-
-size_t
-ft_strlcpy(char * dst, const char * src, size_t dsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 {
-	const char	*firstSrc;
-	size_t 		i;
-	if(dsize < 0 || dsize+1 == 0)
+	const char	*first_src;
+	size_t		i;
+
+	if (dsize < 0 || dsize + 1 == 0)
 		dsize = ft_strlen(src) + 1;
 	i = dsize;
-	
-	firstSrc = src;
-
-	while (i != 0 &&  --i != 0) {
+	first_src = src;
+	while (i != 0 && --i != 0)
+	{
 		if (*src != '\0')
 			*dst++ = *src++;
 	}
-
-	if (i == 0) {
+	if (i == 0)
+	{
 		if (dsize != 0)
-			*dst = '\0';		
+			*dst = '\0';
 		while (*src++)
 			;
 	}
-
-	return(src - firstSrc - 1);
+	return (src - first_src - 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// size_t	ft_strlcpy(char *dest,const char *src,size_t dstsize)
-// {
-// 	size_t	i;
-// 	size_t	count_src;
-
-// 	count_src = ft_strlen(src);
-// 	i = 0;
-// 	if(src == NULL || *src == 0)
-// 		return 0;
-// 	// while (*src && i < dstsize-1)
-// 	// 	dest[i++] = *src++;
-// 	while (i < count_src && i < dstsize)
-// 	{
-// 		dest[i] = src[i];
-// 		i++;
-// 	}
-// 	while (i++ < dstsize)
-// 		dest[i] = '\0';
-	
-	
-	
-//     return dstsize;
-// }

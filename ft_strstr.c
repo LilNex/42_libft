@@ -1,14 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
+/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strstr(const char *haystack, const char *needle)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-    int	len;
-    char *str;
-    char *to_find;
+	int		len;
+	char	*str;
+	char	*to_find;
 
-    str = (char *)haystack;
-    to_find = (char *)needle;
-
+	str = (char *)haystack;
+	to_find = (char *)needle;
 	len = ft_strlen(to_find);
 	if (*to_find == '\0')
 		return (str);
