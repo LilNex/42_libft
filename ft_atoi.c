@@ -78,13 +78,15 @@ int	get_signe(char c)
 
 long	get_nbr(char*str)
 {
-	int	i;
+	int		i;
 	long	nbr;
 
 	i = 0;
 	nbr = 0;
 	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
 	{
+		// if (nbr  >= 9223372036854775807)
+		// 	return -1;
 		nbr = nbr * 10 + ((int)str[i] - 48);
 		i++;
 	}
