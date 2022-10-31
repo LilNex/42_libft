@@ -7,5 +7,6 @@
         "libft.h": "c",
         "stdlib.h": "c",
         "sstream": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

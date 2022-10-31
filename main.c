@@ -1,17 +1,42 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
-#include<strings.h>
+
 #include "libft.h"
-void freeTab(char * * tab)
+
+t_list **create_list(int n_elems, ...)
 {
-	for (int i = 0; tab[i] != NULL; ++i)
-		free(tab[i]);
-	free(tab);
+	t_list **header_ptr = malloc(sizeof(t_list *));
+	va_list argp;
+
+	*header_ptr = NULL;
+	for (int i = 0; i < n_elems; i++){
+        char *t =ft_itoa(i);
+        char tab[]  = "no.";
+        char *s = ft_strdup(ft_strcat(tab,t));
+    	ft_lstadd_back(header_ptr, ft_lstnew(s));
+    }
+
+	return header_ptr;
 }
-int main ()
+void del(void *c)
 {
-    printf("atoi st : %d\n", atoi("9223372036854775807"));
- 
-    printf("atoi ft : %d",ft_atoi("9223372036854775807"));
+    printf("content : %s\n",(char*)c);
+}
+int main()
+{
+    unsigned char x = 'a';
+    t_list **header_ptr;
+    // char *s;
+    t_list *tmp;
+    // s = ft_strchr(0x10c8b2820: "teste", 1024: '\0')
+    int count = 3;
+    header_ptr = create_list(count);
+    printf("pointer : %p\n",header_ptr);
+    tmp = *header_ptr;
+    for (size_t i = 0; i < count; i++)
+    {
+        printf("content of first : %s\n",tmp->content);
+        tmp = tmp->next;
+    }
+    ft_lstclear(header_ptr,del);
+    // printf("p : %p | s : %s\n",s);
+
 }
