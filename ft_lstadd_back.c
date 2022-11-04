@@ -17,7 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	last = ft_lstlast(*lst);
 	if (last)
-		last->next = (struct s_list *)new;
+		last->next = new;
 	else
 		*lst = new;
 }
