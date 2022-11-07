@@ -69,12 +69,12 @@ static char	**fill_array(const char *s, char c, char **arr, int countw)
 				free(arr[x]);
 			return (NULL);
 		}
-		*(arr++) = str;
+		arr[x] = str;
 		s += len + 1;
 		x++;
 	}
-	*arr = NULL;
-	return (arr - x);
+	arr[x] = NULL;
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
