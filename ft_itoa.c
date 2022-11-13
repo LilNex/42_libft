@@ -39,6 +39,48 @@ static void	fill_nbr(char *str, int *n, int *signe, int *l)
 	*l = len;
 }
 
+static int	get_count_digit(int n)
+{
+	int	nbr;
+	int	count;
+
+	nbr = n;
+	count = 2;
+	if (nbr <= 0)
+	{
+		if (nbr == INT_MIN)
+			nbr += 1;
+		nbr *= -1;
+		count++;
+	}
+	if (!nbr)
+		return (3);
+	while (nbr >= 10)
+	{
+		nbr = nbr / 10;
+		count++;
+	}
+	return (count + 1);
+}
+
+void	ft_rev_char_tab(char *tab, int size)
+{
+	int		i;
+	int		y;
+	char	tmp;
+
+	i = size - 1;
+	y = 0;
+	while (i >= 0 && y < i)
+	{
+		tmp = tab[i];
+		tab[i] = tab[y];
+		tab[y] = tmp;
+		y++;
+		i--;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	int		nbr;
@@ -47,7 +89,7 @@ char	*ft_itoa(int n)
 	char	*a;
 	int		signe;
 
-	str = ft_calloc(20, sizeof(char));
+	str = ft_calloc(get_count_digit(n), sizeof(char));
 	if (!str)
 		return (NULL);
 	nbr = n;
