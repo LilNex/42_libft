@@ -6,7 +6,7 @@
 /*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
-/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*   Updated: 2023/06/03 05:53:26 by ichaiq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
+int		ft_isspace(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strnchr(const char *s, int c, int n);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);

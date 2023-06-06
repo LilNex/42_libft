@@ -1,42 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
-/*   Updated: 2023/06/03 05:57:25 by ichaiq           ###   ########.fr       */
+/*   Updated: 2023/06/02 18:08:36 by ichaiq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char	*ft_strrchr(const char *s, int c)
+int	ft_isspace(int c)
 {
-	int	i;
-
-	i = ft_strlen((char *)s);
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *) s + i);
-		i--;
-	}
-	return (NULL);
-}
-
-char	*ft_strnchr(const char *s, int c, int n)
-{
-	int	i;
-	int len;
-
-	len = ft_strlen((char *)s);
-	i = 0;
-	while (n > i && i < len)
-	{
-		if (s[i] == (char)c)
-			return ((char *) s + i);
-		i++;
-	}
-	return (NULL);
+	return (c == 9 || c == 32);
 }

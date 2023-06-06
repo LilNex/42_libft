@@ -6,9 +6,10 @@
 /*   By: ichaiq <ichaiq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:19:59 by ichaiq            #+#    #+#             */
-/*   Updated: 2022/10/22 10:20:36 by ichaiq           ###   ########.fr       */
+/*   Updated: 2023/05/26 01:12:35 by ichaiq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -21,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	size = (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
 	str = ft_calloc(size, sizeof(char));
-	if (str == '\0')
+	if (!str)
 		return (str);
 	i = 0;
 	while (*s1)
